@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="barra"> 
+    <ion-button slot="end" class="boton3" (click)="navegar2()"> volver </ion-button>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/270px-Logo_DuocUC.svg.png" alt="Logo duoc" class="imagen">
+    <ion-title class="centrado">Crear Usuario</ion-title>
+  </ion-toolbar> 
+</ion-header>
+<ion-content [fullscreen]="true" class="white-background">
+
+  <ion-item class="input" lines="none">
+    <ion-input [(ngModel)]="mdl_user" label="usuario" placeholder="Ingresa Nombre de usuario"></ion-input>
+   </ion-item>
+
+ <ion-item class="input" lines="none">
+  <ion-input label="Correo" placeholder="Ingresa Correo"></ion-input>
+ </ion-item>
+
+ <ion-item class="input" lines="none">
+  <ion-input [(ngModel)]="mdl_pass" type="password" label="Contraseña" placeholder="Ingresa Contraseña"></ion-input>
+ </ion-item>
+
+ <ion-item class="input" >
+  <ion-input [(ngModel)]="mdl_confirmar_pass" type="password" label="Confirmar Contraseña" placeholder="Confirme su contraseña"></ion-input>
+ </ion-item>
+ 
+ <ion-button shape="round"  expand="block" (click)="crearUsuario()" class="boton"> Crear Usuario</ion-button>

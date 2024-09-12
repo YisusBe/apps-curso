@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="barra"> 
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/270px-Logo_DuocUC.svg.png" alt="Logo duoc" class="imagen2">
+    <ion-title>Login</ion-title>
+  </ion-toolbar> 
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="white-background">
+
+
+  <ion-item class="inputLogin" lines="none">
+    <ion-input
+    [(ngModel)]="mdl_user" label="Usuario" labelPlacement="floating">
+  </ion-input>
+</ion-item>
+  
+<ion-item class="input" lines="none">
+  <ion-input [(ngModel)]="mdl_pass" type="password"
+  label="Contraseña" labelPlacement="floating">
+</ion-input>
+</ion-item>
+
+  <ion-button shape="round" (click)="navegar()" expand="block" class="boton"> 
+      <ion-spinner *ngIf="cargando" name="circular"></ion-spinner>
+      Ingresar
+    </ion-button> 
+
+<ion-button shape="round" (click)="navegarusuario()" class="boton2" expand="block"> Crear usuario </ion-button>
+
+
+<ion-item class="item-warning" lines="none" *ngIf="visibleWarning">
+Credenciales invalidas
+</ion-item>
+  
+  
+</ion-content>
